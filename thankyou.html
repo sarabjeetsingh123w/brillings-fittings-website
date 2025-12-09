@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You - Brillings Fittings Inc.</title>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: radial-gradient(circle at top, #0b62b8, #001a33);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            background: rgba(255,255,255,0.12);
+            padding: 40px 30px;
+            width: 85%;
+            max-width: 480px;
+            border-radius: 14px;
+            text-align: center;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+            animation: popIn 0.7s ease-out;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .timer {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #ffffff;
+            color: #003366;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background: #e1ecff;
+        }
+
+        @keyframes popIn {
+            from {
+                transform: translateY(25px) scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>Thank You!</h1>
+        <p>Your message has been submitted successfully.</p>
+        <p class="timer">
+            You will be redirected to the Home page in
+            <span id="countdown">5</span> seconds.
+        </p>
+        <a href="index.html">Go to Home Now</a>
+    </div>
+
+    <script>
+        // Simple countdown + auto-redirect
+        var seconds = 5;
+        var countdownSpan = document.getElementById("countdown");
+
+        var interval = setInterval(function () {
+            seconds--;
+            countdownSpan.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = "index.html";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brillings Fittings Inc. - Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            background-color: #000; /* fallback if video doesn't load */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* ===== FIXED BACKGROUND VIDEO BEHIND WHOLE PAGE ===== */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+       header {
+    width: 100%;
+    background-color: rgba(0, 51, 102, 0.90);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(6px);
+}
+
+
+       .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 95%;          /* controls left-right spacing */
+    max-width: 1300px;   /* keeps header centered */
+    margin: 0 auto;      /* centers everything */
+    padding: 0 20px;     /* adds padding inside header */
+}
+
+        .logo-small {
+            height: 70px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #fff;
+            color: #003366;
+        }
+
+        /* ===== MAIN BIG LOGO (center) ===== */
+        .main-logo-box {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .main-logo {
+            width: 890px;
+            max-width: 95%;
+        }
+
+        /* ===== HERO TEXT BOX ===== */
+        .hero-box {
+            margin: 10px auto 20px;
+            padding: 25px;
+            max-width: 960px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-box h2 {
+            font-size: 1px;
+            margin-bottom: 2px;
+        }
+
+        .hero-box p {
+            font-size: 1px;
+        }
+
+        /* ===== MAIN CONTENT SECTION ===== */
+        main {
+            margin: 0 auto 20px;
+        }
+
+        main section {
+            background: rgba(13, 13, 13, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        }
+
+        main h2 {
+            margin-bottom: 10px;
+        }
+
+        main p {
+            margin-bottom: 8px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 12px;
+            background-color: rgba(0, 51, 102, 0.9);
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        /* ===== CONTACT INFO AT VERY BOTTOM ===== */
+        .bottom-contact {
+            margin: 10px auto 40px;
+            max-width: 960px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+<!-- BACKGROUND VIDEO -->
+<div class="video-background">
+    <video autoplay muted loop playsinline>
+        <source src="videos/flash animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="header-flex">
+        <img src="images/logo.png" class="logo-small" alt="Brillings Fittings Logo">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- BIG LOGO CENTERED -->
+<div class="main-logo-box">
+    <img src="images/main-logo.png" class="main-logo" alt="Brillings Fittings Main Logo">
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2014 Brillings Fittings Inc. All rights reserved.</p>
+</footer>
+
+<!-- CONTACT INFORMATION BELOW FOOTER -->
+<div class="container bottom-contact">
+    <h2>Contact Information</h2>
+    <p>
+        Brillings Fittings Inc.<br>
+        3560 McDougal Avenue, Suite 600,<br>
+        Richmond Hill, Ontario L4B 6R2
+    </p>
+    <p>
+        Telephone: (905) 987-6543<br>
+        Fax: (905) 987-5432
+    </p>
+    <p>
+        Email: info@brillingsfittings.com
+    </p>
+</div>
+
+<!-- VIDEO SPEED CONTROL -->
+<script>
+    const bgVideo = document.querySelector(".video-background video");
+    // 1.0 = normal, 0.5 = 2x slower, change if you want
+    bgVideo.playbackRate = 0.5;
+</script>
+
+</body>
+</html>

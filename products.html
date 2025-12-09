@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products - Brillings Fittings Inc.</title>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, Helvetica, sans-serif; background-color: #f5f5f7; color: #333; }
+
+        header {
+            width: 100%;
+            background-color: rgba(0, 51, 102, 0.90);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            backdrop-filter: blur(6px);
+        }
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 95%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-small { height: 70px;
+             width: auto; }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #fff;
+            color: #003366;
+        }
+
+        .hero {
+            width: 100%;
+            height: 260px;
+            background-image: url('images/about-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            border-radius: 8px;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .hero-text h2 {
+            font-size: 36px;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .container { width: 90%; max-width: 960px; margin: 20px auto; }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        h2 { margin-bottom: 15px; }
+
+        .product-list {
+            margin-top: 20px;
+            max-height: 380px;      
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-flex">
+        <img src="images/logo.png" class="logo-small" alt="Brillings Fittings Logo">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a class="active" href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="hero-text">
+        <h2>Our Products</h2>
+    </div>
+</div>
+
+<main class="container">
+    <section>
+        <h2>Our Products</h2>
+
+        <p>
+            Brillings Fittings Inc. manufactures precision screw fittings and components
+            for industrial, oil &amp; gas, and medical applications. Below are some of
+            our key product categories.
+        </p>
+
+        <p>Some of our most popular product categories include:</p>
+
+        <div class="product-list">
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <img src="images/plastic-screws.jpg" alt="Plastic Screws">
+                    <h3>Industrial Plastic Screws</h3>
+                    <p>Durable, lightweight, and corrosion-resistant fasteners.</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/mixed-fittings.jpg" alt="Mixed Metal Fittings">
+                    <h3>Mixed Metal Fittings</h3>
+                    <p>Wide range of industrial connectors and precision parts.</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/shafts.jpg" alt="Precision Shafts">
+                    <h3>Precision Shafts</h3>
+                    <p>High-strength shafts used in multiple mechanical systems.</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/hdpe-fittings.jpg" alt="HDPE Pipe Fittings">
+                    <h3>HDPE Pipe Fittings</h3>
+                    <p>High-density polyethylene fittings for industrial piping.</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/med-fitting-clear.jpg" alt="Clear Medical Connector">
+                    <h3>Clear Medical Connector</h3>
+                    <p>High-precision transparent connector for medical fluid handling systems.</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/hdpe-tee-fittings.jpg" alt="HDPE Tee Compression Fittings">
+                    <h3>HDPE Tee Compression Fittings</h3>
+                    <p>Robust tee fittings for high-pressure HDPE water and irrigation lines.</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/steel-fittings.jpg" alt="Stainless Steel Compression Fittings">
+                    <h3>Stainless Steel Compression Fittings</h3>
+                    <p>Corrosion-resistant compression joints for critical process piping.</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/chrome-acorn-nuts.jpg" alt="Chrome Acorn Nuts">
+                    <h3>Chrome Acorn Nuts</h3>
+                    <p>Decorative and protective acorn nuts with high-polish chrome finish.</p>
+                </div>
+
+            
+                <div class="product-card">
+                    <img src="images/industrial-couplings.jpg" alt="Industrial Hose Couplings">
+                    <h3>Industrial Hose Couplings</h3>
+                    <p>Brass and steel couplings for air, water, and hydraulic hose assemblies.</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/hdpe-fittings.jpg" alt="HDPE Pipe Fittings">
+                    <h3>HDPE Pipe Fittings</h3>
+                    <p>Complete range of couplings, elbows, and adapters for HDPE pipelines.</p>
+                </div>
+
+        
+                <div class="product-card">
+                    <img src="images/med-check-valve.jpg" alt="Medical Check Valve">
+                    <h3>Medical Check Valve</h3>
+                    <p>One-way valve for safe, reliable flow control in medical devices.</p>
+                </div>
+
+
+                <div class="product-card">
+                    <img src="images/green-tricone-bit.jpg" alt="Tricone Drill Bit">
+                    <h3>Tricone Drill Bit</h3>
+                    <p>Heavy-duty tricone bit engineered for deep drilling operations.</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/dual-tricone-bits.jpg" alt="Dual Tricone Drill Bits">
+                    <h3>Dual Tricone Drill Bits</h3>
+                    <p>Matched pair of drill bits optimized for tough rock formations.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <p style="margin-top:20px;">
+            For a complete catalog of all available components, email us at
+            <a href="mailto:catalog@brillingsfittings.com">catalog@brillingsfittings.com</a>.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2014 Brillings Fittings Inc. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
